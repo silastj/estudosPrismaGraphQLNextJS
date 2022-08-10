@@ -130,6 +130,9 @@ Dando o nome ConsultarLinks ou apenas com o query
 - Iremos instalar o apolloClient
 `` npm i @apollo/client ``
 
+- Criar o arquivo apollo-client.ts dentro da pasta graphql
+
+
 
 
 
