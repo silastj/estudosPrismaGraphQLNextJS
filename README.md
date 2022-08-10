@@ -79,5 +79,63 @@ jsonplaceholder.typicode.com/posts
 - No arquivo [ typesDefs.ts ] iremos configurar o que podemos acessar, fazer uma consulta Query em links e escolher qual tipo de dados acessar.
 
 (2) passo
-- No arquivo [ resolvers.ts ] iremos dar continuidade
+- No arquivo [ resolvers.ts ] iremos dar continuidade, ele vai no prisma pegas as informações( links ), depois alimentei o arquivo context.ts / pasta libs com arquivo prisma.ts
+
+(3) passo 
+- instalar a libs para ajustar os types do projeto
+`` npm i @graphql-codegen/cli`` 
+- onde está o codigo e o start
+`` npx graphql-codegen init ``
+
+- Seguir a sequencia abaixo:
+backend
+./graphql/typeDefs.ts
+enter
+escolher apenas 1 => typescript(required by other typescript plugins)
+./graphql/resolvers-types.ts
+no
+yes
+codegen
+
+
+- Criado um arquivo chamado codegen.yml
+Nele vc tira a parte da documents e inclui no plugins
+- "typescript-resolvers"
+
+- Depois npm install
+- Por fim o comando abaixo
+`` npm install -D @graphql-codegen/typescript-resolvers ``
+
+- Iremos rodar o comando para ele criar o arquivo types
+`` npm run codegen ``
+- Após ele criar iremos importar no arquivo que está precisando dele o resolvers.ts
+
+**FINALIZAMOS A PARTE DO BACKEND COM GRAPHQL**
+
+**INICIANDO A CRIAÇÃO DA API**
+Dentro da pasta pages/api criaremos o arquivo graphql.ts
+Depois de definir  path: '/api/graphql'
+Iremos rodar npm run dev e acessar localhost:3000/api/graphql e clicar BTN query your server
+
+Na coluna Operation podemos fazer a consulta 
+query ConsultarLinks {
+  links {
+    id
+    title
+  }
+}
+
+Dando o nome ConsultarLinks ou apenas com o query
+
+- Iremos instalar o apolloClient
+`` npm i @apollo/client ``
+
+
+
+
+
+
+
+
+
 
