@@ -66,3 +66,18 @@ jsonplaceholder.typicode.com/posts
 
 
 **Configurando o GraphQL**
+- Temos o apollo para consumir client e criar o servidor.
+`` npm i graphql apollo-server-micro micro micro-cors`` 
+`` npm i -D @types/micro-cors `` adicionado para dá suporte ao TS
+
+- Depois criaremos uma pasta graphql( dentro: definição do servidor e cliente )
+-- criaremos o typesDefs.ts ou schema.ts
+-- resolvers.ts
+-- context.ts
+
+(1) passso
+- No arquivo [ typesDefs.ts ] iremos configurar o que podemos acessar, fazer uma consulta Query em links e escolher qual tipo de dados acessar.
+
+(2) passo
+- No arquivo [ resolvers.ts ] iremos dar continuidade
+
