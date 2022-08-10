@@ -32,3 +32,37 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+**Iniciar** 
+npx create-next-app --typescript
+
+**Name Folder**
+projeto-prisma-graphql-nextjs
+
+**Ferramentas usada no Projeto**
+- Nextjs - Framework de React
+- GraphQL - Grapqh Query Language
+-- backend
+-- frontend
+- Prisma - ORM
+
+**API FAKE**
+jsonplaceholder.typicode.com/posts
+
+**Instalação dos pacotes**
+`` npm i -D prisma ``  A Letra D não vai para o build final apenas desenvovivelmento
+`` npm i @prisma/client `` 
+
+- Rodar 
+`` npx prisma init ``
+
+**Após criar o banco iremos inserir os dados via comando**
+`` npx prisma db push ``
+- O inverso vc usa pull quando tem o banco de dados pronto e trazer para o projeto
+
+- Após colocar os dados no banco de dados manual, rodamos outro comando para integrar com os dados e integrar com o prisma client
+
+`` npx prisma generate ``
+
+
+**Configurando o GraphQL**
